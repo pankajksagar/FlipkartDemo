@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart - Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">
+            <span>Flipkart</span>
+            <small>Explore <b>Plus ✦</b></small>
+        </a>
+
+        <div class="search-box">
+            <span>🔍</span>
+            <input type="text" id="searchInput"
+                   placeholder="Search for products, brands and more">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <button class="login-btn" id="loginBtn">Login</button>
+
+        <button class="cart-btn" id="cartToggle">
+            🛒 Cart <span id="cartCount">0</span>
+        </button>
+
+        <a href="#products" class="seller-link">Become a Seller</a>
+    </header>
+
+    <!-- Categories -->
+    <nav class="categories">
+        <button class="category-item active" data-category="All">
+            <span>🛍️</span> All
+        </button>
+        <button class="category-item" data-category="Electronics">
+            <span>📱</span> Electronics
+        </button>
+        <button class="category-item" data-category="Fashion">
+            <span>👕</span> Fashion
+        </button>
+        <button class="category-item" data-category="Home">
+            <span>🛋️</span> Home
+        </button>
+        <button class="category-item" data-category="Appliances">
+            <span>🧊</span> Appliances
+        </button>
+        <button class="category-item" data-category="Books">
+            <span>📚</span> Books
+        </button>
+        <button class="category-item" data-category="Beauty">
+            <span>💄</span> Beauty
+        </button>
+    </nav>
+
+    <!-- Promotional Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-tag">THE BIG SHOPPING FESTIVAL</p>
+            <h1>Big Deals. Bigger Smiles.</h1>
+            <p>Discover amazing products at exciting prices.</p>
+            <button id="shopNowBtn" class="shop-btn">Shop Now →</button>
+        </div>
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=900&q=85"
+                alt="Shopping bags and shopping offers">
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div>🚚 <span>Fast Delivery</span></div>
+        <div>🔒 <span>Secure Shopping Demo</span></div>
+        <div>💰 <span>Great Prices</span></div>
+        <div>↩️ <span>Easy Returns Demo</span></div>
+    </section>
+
+    <!-- Products -->
+    <main id="products" class="products-section">
+        <div class="section-heading">
+            <div>
+                <h2>Best Deals For You</h2>
+                <p>Explore our popular products</p>
+            </div>
+            <button id="clearFilters" class="clear-btn">View All Products</button>
+        </div>
+
+        <div id="resultsInfo" class="results-info"></div>
+
+        <div id="productGrid" class="product-grid">
+            <!-- Products are added by JavaScript -->
+        </div>
+
+        <div id="emptyMessage" class="empty-message" hidden>
+            <h3>No products found 😕</h3>
+            <p>Try another search or select a different category.</p>
+            <button id="resetSearch" class="shop-btn">Show All Products</button>
+        </div>
+    </main>
+
+    <!-- Shopping Cart Drawer -->
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <aside id="cartDrawer" class="cart-drawer" aria-label="Shopping cart">
+        <div class="cart-header">
+            <h2>🛒 My Cart</h2>
+            <button id="closeCart" class="close-btn" aria-label="Close cart">
+                ✕
+            </button>
+        </div>
+
+        <div id="cartItems" class="cart-items">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total Amount</span>
+                <strong id="cartTotal">₹0</strong>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn">
+                Proceed to Checkout
+            </button>
+            <p class="demo-note">
+                Demo only — no real payment will be processed.
+            </p>
+        </div>
+    </aside>
+
+    <!-- Login Demo Modal -->
+    <div id="loginModal" class="modal" hidden>
+        <div class="modal-content">
+            <button id="closeLogin" class="close-btn" aria-label="Close login">
+                ✕
+            </button>
+            <h2>Welcome to Flipkart</h2>
+            <p>Enter a name to personalize your demo experience.</p>
+            <form id="loginForm">
+                <input
+                    id="userName"
+                    type="text"
+                    placeholder="Enter your name"
+                    maxlength="40"
+                    required>
+                <button type="submit" class="checkout-btn">Continue</button>
+            </form>
+            <p class="demo-note">Demo login only. No password or OTP required.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <h3>About</h3>
+            <a href="#products">About Us</a>
+            <a href="#products">Our Products</a>
+        </div>
+        <div>
+            <h3>Help</h3>
+            <a href="#products">Payments</a>
+            <a href="#products">Shipping</a>
+            <a href="#products">Returns</a>
+        </div>
+        <div>
+            <h3>Connect</h3>
+            <p>Customer Support: Demo Store</p>
+            <p>Made for learning HTML, CSS and JavaScript.</p>
+        </div>
+        <p class="copyright">
+            © 2026 Flipkart-Inspired Demo Store. Educational project; not affiliated with Flipkart.
+        </p>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
